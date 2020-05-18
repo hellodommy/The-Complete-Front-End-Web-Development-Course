@@ -36,3 +36,11 @@
 - `a` - creates a link.
   - `<a href = "website link">website name</a>` for hypertext reference.
   - Use `#` if you do not want the link to go anywhere.
+
+## `ul`, `li` and `ol`
+- Lists.
+- `ul` - the actual list element (unordered list).
+  - `li` - for each item in the list (list item).
+- `ol` - list element which is *numbered* (ordered list).
+- Adding a list element within a list item will create a sublist.
+- Lists can be horizontal or dropdown, etc. with CSS or JavaScript.
