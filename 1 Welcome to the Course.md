@@ -17,4 +17,3 @@ In Atom,
 2. In project folder, Right-Click -> Add file -> named `index.html`.
 3. Type out `Hello world` in the new file.
 4. Open `index.html` in web browser and you should see the words `Hello world` on the page. You've written your first web page! :)
-
