@@ -9,4 +9,3 @@
     - Include a `<title>` tag that will appear on the window of your browser.
   - Everything in `<body>` will appear on the screen.
 - **Element** includes the opening tag, all the text within it, and the closing tag.
-
