@@ -45,7 +45,7 @@
 - Adding a list element within a list item will create a sublist.
 - Lists can be horizontal or dropdown, etc. with CSS or JavaScript.
 
-## Header and Footer
+## `header` and `footer`
 
 - Bad practice to use `div` for everything.
 - There are block elements available to arrange content in a better way.
@@ -53,3 +53,9 @@
 - `footer` - used at the bottom at the site as it better describes the content compared to a simple `div`.
 - These solve the problem of **`<div>` soup** where front-end web developers wrap every HTML element they possibly can in enough `<div>` elements to make your eyes bleed [source](https://www.chillybin.com.sg/would-you-like-another-bowl-of-div-soup/).
 - By default, HTML will only recognise the first space character. Putting multiple spaces together will not result in a large space on the page. Instead, use `&nbsp` for large spaces.
+
+## `section`, `main` and `article`
+- `<br />` - self-closing tag for line break.
+- `article` - similar to header and footer - no difference using a `div` but it tells the reader that the element contains an article (more readable).
+- `main` - for main content area that wraps around some part inside the `body` for better readability.
+- `section` - allow for multiple sections, usually within `main`. Logically divided into eg. About Me, Contact, FAQ.
