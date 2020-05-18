@@ -44,3 +44,12 @@
 - `ol` - list element which is *numbered* (ordered list).
 - Adding a list element within a list item will create a sublist.
 - Lists can be horizontal or dropdown, etc. with CSS or JavaScript.
+
+## Header and Footer
+
+- Bad practice to use `div` for everything.
+- There are block elements available to arrange content in a better way.
+- `header` - used for the name of the site. `div` can be used instead, but it is better practice to use more *appropriate* tags when possible.
+- `footer` - used at the bottom at the site as it better describes the content compared to a simple `div`.
+- These solve the problem of **`<div>` soup** where front-end web developers wrap every HTML element they possibly can in enough `<div>` elements to make your eyes bleed [source](https://www.chillybin.com.sg/would-you-like-another-bowl-of-div-soup/).
+- By default, HTML will only recognise the first space character. Putting multiple spaces together will not result in a large space on the page. Instead, use `&nbsp` for large spaces.
