@@ -10,7 +10,9 @@
   - Everything in `<body>` will appear on the screen.
 - **Element** includes the opening tag, all the text within it, and the closing tag.
 
-# HTML Elements - `div` and `span`
+# HTML Elements
+
+## `div` and `span`
 
 - Empty lines in the `<body>` tag will not translate to the web page.
   - Try `Hello` followed by many blank lines, and `world`. Notice that they still appear on the same line on the page.
@@ -25,4 +27,12 @@
 - On your browser, open up *Developer Tools* (`Cmd + Option + I` on Google Chrome).
   - Hover over the different elements to see their full width highlighted in blue (margin is orange and padding is green).
   - Notice `div` cannot take up the entire width of the page - it can only take up the entire width of its parent, `body`.
-  - Notice `span` elements are only 
+  - Notice `span` elements are only wide as they need to be.
+
+## `i`, `b`, `p` and `a`
+- `i` - italicise words.
+- `b` - **bold** words.
+- `p` - a block element, like a replacement for `div`. It adds a line break above and below the element for the paragraph. Notice there is no space between `div` elements.
+- `a` - creates a link.
+  - `<a href = "website link">website name</a>` for hypertext reference.
+  - Use `#` if you do not want the link to go anywhere.
