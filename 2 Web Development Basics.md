@@ -91,3 +91,10 @@ The above tags can help to resolve *`div` soup*.
   - `<tbody></tbody>` - populating the table.
     - `<tr></tr>` - table row.
       - `<td></td>` - table data within each row. Each `td` corresponds to a column created in `th`.
+
+# Advanced HTML Concepts
+
+## Images
+- Image tags are *block level* - they will appear full-width within the page.
+- Format: `<img src = "image file path" />`.
+- To resize image, use `width="x%"` or any other `px` value.
