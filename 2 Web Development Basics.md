@@ -57,5 +57,37 @@
 ## `section`, `main` and `article`
 - `<br />` - self-closing tag for line break.
 - `article` - similar to header and footer - no difference using a `div` but it tells the reader that the element contains an article (more readable).
+  - Without reading any content inside the tag, we know that it contains an article.
 - `main` - for main content area that wraps around some part inside the `body` for better readability.
 - `section` - allow for multiple sections, usually within `main`. Logically divided into eg. About Me, Contact, FAQ.
+
+The above tags can help to resolve *`div` soup*.
+
+## h1-h6 and aside
+
+- There are 6 different levels of the H element.
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+- They are invoked using `<h1> Examples </h1>` and so on.
+- `aside` - secondary to the main content.
+
+# HTML Tables
+- `<table></table>` - created on diffeerent lines (vs tags like `h1` that are on the same line).
+> To create a table border, change the opening tag to `<table border = "1px">`.
+> 
+> To let each element grow to however big it needs to be, add `width = "100%"`.
+>
+> FYI: These are *inline style tags* which are bad practice. Use CSS instead.
+
+  - `<thead></thead>` - table header. Prints out the titles of each column.
+    - `<tr></tr>` - table row.
+      - `<th></th>` - column in the header of a table.
+> To specify the width, change the opening tag to `<th width = "20px">`. All cells within the column will be affected.
+
+  - `<tbody></tbody>` - populating the table.
+    - `<tr></tr>` - table row.
+      - `<td></td>` - table data within each row. Each `td` corresponds to a column created in `th`.
