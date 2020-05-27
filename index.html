@@ -10,6 +10,10 @@
         </header>
 
         <main>
+
+            <section>
+                
+            </section>
             <section>
                 <h2>About Me</h2>
                 <p>I am a second year Computer Science undergraduate.</p>
@@ -34,16 +38,26 @@
 
             <section id ="contact-form">
                 <h2>Place Order</h2>
-                <form method="POST" action="place-order.php">
+                <form method="GET" action="place-order.php">
+                    <h4>Delivery mode</h4>
+                    <input name="delivery" type="radio" value="delivery" />Delivery<br>
+                    <input name="delivery" type="radio" value="pickup" />Pick up<br>
                     <h4>Introduce Yourself</h4>
                     <input name="name" placeholder="Your Name" class="lg-input"><br>
                     <input name="email" placeholder="Your Email" class="lg-input"><br>
                     <input name="age" placeholder="Your Age" class="sm-input"><input name="phone" placeholder="Your Number" class="sm-input"><br>
-
+                    <h4>Size</h4>
+                    <select name="size">
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>
                     <h3>More questions</h3>
-                    <input name="Student" type="checkbox"> Are you a student?<br>
-                    <input name="Chinese" type="checkbox"> Are you Chinese?<br>
-                    <input name="pet" type="checkbox"> Do you have a pet?<br>
+                    <input name="information" type="checkbox" value="student"> Are you a student?<br>
+                    <input name="information" type="checkbox" value="chinese"> Are you Chinese?<br>
+                    <input name="information" type="checkbox" value="pet"> Do you have a pet?<br>
+                    <br>
+                    <button type="submit">Submit form</button>
                 </form>
             </section>
 
