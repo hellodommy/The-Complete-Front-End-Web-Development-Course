@@ -1,72 +1,30 @@
 <html>
     <head>
         <title>My Project Site</title>
+        <link rel="stylesheet" href="css/style.css" />
     </head>
 
     <body>
-        <header>
-            <h1>My Project Site</h1>
-            <h3>Demonstrating my HTML skills here!</h3>
-        </header>
+       <header id="main-header">
+           <h1>best news ever</h1>
+           <h3>cb ended</h3>
+       </header>
 
-        <main>
+       <section id="top-stories">
+           <article>
+               <div class="article-image" style="background:url(dog.jpg)"></div>
+               <h3>dog kidnapped by other dog</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+               <a href="#" class="more-link">more link</a>
+           </article>
 
-            <section>
-                
-            </section>
-            <section>
-                <h2>About Me</h2>
-                <p>I am a second year Computer Science undergraduate.</p>
-            </section>
+           <article>
+                <div class="article-image" style="background:url(dbs.jpg)"></div>
+                <h3>hiring!</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                <a href="#" class="more-link">more link</a>
+           </article>
 
-            <section>
-
-                <article>
-                    <img width="20%" src="summer2020.jpg">
-                    <a href="#"><h3>My Summer 2020</h3></a>
-                    <p>Because of the circuit breaker in Singapore, I have been staying at home all summer. I will be having an internship soon in June.</p>
-                    <br><br>
-                </article>
-
-                <article>
-                    <img width="30%" src="dbs.jpg">
-                    <a href="#"><h3>My Internship 2020</h3></a>
-                    <p>I will be interning at DBS. It might be a work from home arrangement.</p>
-                    <br><br>
-                </article>
-            </section>
-
-            <section id ="contact-form">
-                <h2>Place Order</h2>
-                <form method="GET" action="place-order.php">
-                    <h4>Delivery mode</h4>
-                    <input name="delivery" type="radio" value="delivery" />Delivery<br>
-                    <input name="delivery" type="radio" value="pickup" />Pick up<br>
-                    <h4>Introduce Yourself</h4>
-                    <input name="name" placeholder="Your Name" class="lg-input"><br>
-                    <input name="email" placeholder="Your Email" class="lg-input"><br>
-                    <input name="age" placeholder="Your Age" class="sm-input"><input name="phone" placeholder="Your Number" class="sm-input"><br>
-                    <h4>Size</h4>
-                    <select name="size">
-                        <option value="small">small</option>
-                        <option value="medium">medium</option>
-                        <option value="large">large</option>
-                    </select>
-                    <h3>More questions</h3>
-                    <input name="information" type="checkbox" value="student"> Are you a student?<br>
-                    <input name="information" type="checkbox" value="chinese"> Are you Chinese?<br>
-                    <input name="information" type="checkbox" value="pet"> Do you have a pet?<br>
-                    <br>
-                    <button type="submit">Submit form</button>
-                </form>
-            </section>
-
-            <footer>
-                <center>
-                    &copy; 2020<br>
-                    <a href="#">Terms of Service</a><br>
-                </center>
-            </footer>
-        </main>
+       </section>
     </body>
 </html>
