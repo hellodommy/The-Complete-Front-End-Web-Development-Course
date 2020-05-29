@@ -30,6 +30,7 @@
   - To increment, use `variable++`. To decrement, use `variable--`.
   - `+=` and `-=` applies.
 - Concatenate strings using `+` or `,`.
+  - By using a comma, a space is added between automatically.
 
 ## Boolean operators
 
@@ -37,11 +38,35 @@
 
 ## Comparing values
 
-- `a == b` to compare values.
+- `a == b` checks if values are equal.
   - `a = b` to assign values.
+- `a != b` checks if they are **not equal**.
+- Other comparisons can be used as well, eg. `>`, `<`, `<=`, `>=`.
 
 ## If statements
 
+Syntax: `if (predicate) { do something } else { do something else }`
+
+An extra check: `else if (predicate)`.
+
 ## For loops
 
+- Does something repeatedly unless a threshold is met.
+
+Syntax: `for (var i = initial; i < limit; i++) { blah }`
+
 ## Defining functions
+
+- Not run, but it can be referenced to run.
+- It is only run when it is called!
+
+Syntax: `function name(param) {...}`
+
+## Event handling
+
+- Create a button in HTML.
+
+`<button id="go-button">GO</button>`
+
+- Right now when you click it, nothing happens.
+- Clicking on it now is an *event*.
