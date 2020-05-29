@@ -70,3 +70,23 @@ Syntax: `function name(param) {...}`
 
 - Right now when you click it, nothing happens.
 - Clicking on it now is an *event*.
+- Create a function in Javascript that logs to the console. Still, nothing is happening because the function and the button are *not linked*.
+
+2 Ways to Link
+1. Add a `onclick` property to the HTML button.
+   `onclick="javascript_function_call"`
+2. In Javascript, type the following line.
+   `var btn = document.getElementById("button_id_name")`
+  - Then add an *event listener*: `btn.addEventListener("click", buttonClicked)`. Clicking on the button many times will log to the console many times.
+    1. First arg is the event we are listening for.
+    2. Second arg is the actual function that is called.
+  - To make sure that the button can only be pressed once, add the line `btn.removeEventListener("click", buttonClicked)` inside the function. Now, clicking multiple times will only log to the console on the first time.
+
+## Setting an element's innerHTML
+
+1. Create a `div` text with an `id` assigned.
+2. Under the same function as in the previous step, add the following line.
+   `document.getElementById("id_name").innerHTML = "text to replace"`.
+3. Now, clicking on the button will change the `div` text to the new text.
+
+- `console.log()` to see what `document.getElementById("id")` and `document.getElementById("text").innerHTML` are.
