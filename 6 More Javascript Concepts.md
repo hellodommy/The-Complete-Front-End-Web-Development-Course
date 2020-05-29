@@ -25,4 +25,25 @@
   1. Index to add/remove items.
   2. Number of items to remove (if set to 0, nothing is removed).
   3. New items to be added to the array.
-- To find if an item is in the array, use predicate `arrayName.indexOf(element name) > -1` (basically if it is in the array, it will have an index number).
+- To find if an item is in the array, use predicate `arrayName.indexOf(element name) > -1` (basically if it is in the array, it will have an index number). 
+
+## Textareas and getting the value of inputs
+
+1. In HTML, put `<input class="my-input">`.
+2. In Javascript, put `var customText = document.getElementsByClassName("my-input");`. Whatever we input into the box is stored in customText.
+3. To access it, use `customText[0].value`.
+
+- `<textarea>` is a large input field for text. It is multi-line and follows different rules.
+
+  `<textarea placeholder="Your message here">whatever here will be prefilled into the text area</textarea>`
+
+  - To disable resizing of the text area, set the property `resize: none;` in CSS.
+
+- To prefill an input, set the `value` property to whatever you want to be inside.
+
+  `<input class="my-input" value="whatever here will be prefilled">`
+
+- `innerText` prints out only the text, `innerHTML` prints out the code behind it.
+
+## Functions - parameters and return values
+
