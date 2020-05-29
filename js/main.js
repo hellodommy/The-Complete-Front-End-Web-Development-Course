@@ -10,3 +10,13 @@ function buttonClicked() {
 }
 
 btn.addEventListener("click", buttonClicked);
+
+var hobbies = ["pizza", "sleep", "gaming"];
+hobbies.forEach(function(item, index) {
+    console.log("I like ", item, index);
+})
+
+console.log("shift: " + hobbies.shift());
+console.log("hobbies: " + hobbies);
+console.log("unshift: " + hobbies.unshift("studying"));
+console.log("hobbies now: " + hobbies);
