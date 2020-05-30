@@ -22,35 +22,8 @@ h3 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#top-stories {
-    width: 1000px;
-    margin: auto;
-    margin-top: 20px;
-}
-
-article {
-    max-width: 250px;
-    display: inline-block;
-    border: 1px solid #444444;
-    padding: 10px;
-    margin: 10px;
-    transition: opacity 1s;
-}
-
 a:hover {
-    font-size: 40px;
-}
-
-.article-image {
-    background-position: center;
-    background-size: cover !important;
-    height: 200px;
-    width: 200px;
-    border-radius: 100%;
-}
-
-.more-link {
-    font-style: italic;
+    color: #ffffff;
 }
 
 p {
@@ -70,6 +43,24 @@ p {
     background: #ffafaf;
 }
 
-article:hover {
-    opacity: .4;
+.profile-menu {
+    list-style: none;
+    float: right;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0px;
+    border: 1px solid #aaa;
+    background: #fff;
+    margin-top: 30px;
+    box-shadow: 2px 2px 15px #aaa;
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+
+.submenu.active {
+    display: block;
 }

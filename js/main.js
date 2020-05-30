@@ -1,12 +1,10 @@
 $(document).ready(function() {
-
-    $('#text').html("this is my text");
-
-    var el = document.getElementById('text');
-    console.log("EL in Vanilla JS: ", el);
-    console.log("El in jQuery: ", $(el));
-
-    $('#go-button').on('click', function () {
-        alert("Good job!");
-    });
+    $('[data-trigger="dropdown"]').on('mouseenter', function() {
+        console.log("hi");
+        var submenu = $(this).parent().find('.submenu')
+        submenu.addClass('active');
+        $('.profile-menu').on('mouseleave', function() {
+            submenu.removeClass('active');
+        })
+    })
 })
