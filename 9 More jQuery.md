@@ -144,3 +144,18 @@ This will log the contents for every `p` element.
     console.log($('p').text())
 
 This will achieve the same effect but the contents will be in a single log output instead.
+
+## Callbacks
+
+- A function that can be run *after* you do something.
+- Now we are using anonymous functions for many of our jQuery methods. If we want to use the same function in multiple places, we can create a function outside (say `sampleFunction`) and call it as `sampleFunction`.
+
+## CSS
+
+    $('input').css({
+        background: #f00,
+        padding: 10px
+    })
+
+- We can set CSS properties in Javascript.
+- However, properties separated by a dash use camel case here. Eg. `border-color` becomes `borderColor`.

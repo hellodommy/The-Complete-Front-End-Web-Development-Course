@@ -31,10 +31,6 @@ $(document).ready(function() {
 
     })
 
-    $('[href="https://google.com"]').on('click', function (event) {
-        return false;
-    })
-
     $('#targetOne, #targetTwo, #targetThree').on('click', function(e) {
         var el = $(e.currentTarget);
         var action = el.attr('id');
@@ -59,14 +55,17 @@ $(document).ready(function() {
         console.log("Focused out on the textarea");
     })
 
-    $('input').focusout(function() {
-        if ($(this).val().indexOf('@') > -1 && $(this).val().indexOf('.') > -1) {
+
+    
+    function checkEmail(el) {
+        if ($(el).val().indexOf('@') > -1 && $(el).val().indexOf('.') > -1) {
             $('.status').html("Valid email");
         } else {
             $('.status').html("Invalid email");
-
         }
-    })
+    }
+
+    $('input[name=email]').focusout(checkEmail);
 
     $('p').each(function() {
         console.log($(this).text());
