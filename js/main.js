@@ -59,25 +59,14 @@ $(document).ready(function() {
         console.log("Focused out on the textarea");
     })
 
-    window.passed = 0;
-    window.hasAt = 0;
-    window.hasDot = 0;
-
-    $('input[name=email]').on('keyup', function() {
-
-        if ($(this).val().indexOf('@') > -1) {
-            hasAt++;
-        }
-        if ($(this).val().indexOf('.') > -1) {
-            hasDot++;
-        }
-
-        if (window.hasAt > 1 && window.hasDot > 1) {
-            $('.status').html("VALID");
+    $('input').focusout(function() {
+        if ($(this).val().indexOf('@') > -1 && $(this).val().indexOf('.') > -1) {
+            $('.status').html("Valid email");
         } else {
-            $('.status').html("INVALID");
+            $('.status').html("Invalid email");
 
         }
-        
     })
+
+
 })
