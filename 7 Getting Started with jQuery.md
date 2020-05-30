@@ -107,3 +107,102 @@
     })
 
 - Make sure there is a path from menu item to submenu by adjusting padding, etc.
+- Look for jQuery API for more ideas.
+
+## Multiple targets, events, and attr method.
+
+- Say we have 3 buttons.
+
+    `<button id="targetOne">Target 1</button>`
+
+    `<button id="targetTwo">Target 2</button>`
+
+    `<button id="targetThree">Target 3</button>`
+
+- For multiple targets, separate them by a comma.
+
+    $('#targetOne, #targetTwo, #targetThree').on('click', function(e) {
+        console.log(e);
+    });
+
+- `e` stands for event. Look at the console after clicking each target to see what it is.
+  S.Event {originalEvent: MouseEvent, type: "click", target: button#targetTwo, currentTarget: button#targetTwo, isDefaultPrevented: ƒ, …}
+
+- We can get attributes of an element by using `attr` (it must first be converted to a jQuery object).
+
+    $('#targetOne, #targetTwo, #targetThree').on('click', function(e) {
+        var el = $(e.currentTarget);
+        var action = el.attr('id');
+        if (action == 'targetOne') {
+            console.log("target 1 is pressed");
+        } else if (action == 'targetTwo') {
+            console.log("target 2 is pressed");
+        } else if (action == 'targetThree') {
+            console.log("target 3 is pressed");
+        }
+    });
+
+- `action` will return the id of the button that is pressed.
+- Now a specific message will log to the console, depending on the button that is pressed.
+
+## Prepend, append and HTML
+
+Now we have a `textarea`.
+
+    <textarea class="text" placeholder="Type something here"></textarea><br>
+
+- To retrieve the text inside, use
+
+    var content = $('.text').val();
+
+- Log to the console to check that it is getting the value.
+- To **prepend**, `$('#main').prepend(content);`.
+  - `$('#main').prepend('<a href="#"' + content + '</a>');` to create a link.
+- To **append**, `$('#main').append(content);`.
+- To **replace**, `$('#main').html(content);`.
+
+## preventDefault
+
+- To prevent the default behaviour.
+
+Say we have a link `<a href="https://google.com" target="_blank">google</a><br>`
+
+- To target in jQuery, use `$('[href="http://google.com"]');` (selecting an item by its attributes).
+- On click, we pass in the function with event as a parameter.
+  - Log to the console to make sure it is targetting the link correctly.
+- To prevent the link from opening when we click the link, type `event.preventDefault()` in the function.
+  - Using `return false` will also have the same effect.
+
+## event.which and switch properties
+
+    $(document).on('click', function(event) {
+        console.log(event);
+    })
+
+- This will detect when you click anywhere on the document. We want to target the right-click event.
+
+    $(document).on('mousedown', function(event) {
+        event.preventDefault();
+        console.log(event.which);
+    })
+
+- Now 1, 2, 3 will be logged to the console, depending if left, middle or right click was pressed.
+
+    $(document).on('mousedown', function(event) {
+        event.preventDefault();
+        switch(event.which) {
+            case 1:
+                console.log("left mouse clicked");
+                break;
+            case 2:
+                console.log("middle mouse clicked");
+                break;
+            case 3:
+                console.log("right mouse clicked");
+                break;
+        }
+        console.log(event.which);
+    })
+
+- Now we can target cases where certain mouse type is clicked. We are using a switch statement.
+- 
