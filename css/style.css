@@ -38,3 +38,7 @@ section {
 .context-menu a:hover {
     background: #eee; 
 }
+
+.context-menu a.hidden {
+    display: none;
+}

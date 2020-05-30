@@ -8,6 +8,13 @@ $(document).ready(function() {
         event.stopPropagation();
 
         if (event.which == 3) {
+
+            $('.hidden').hide();
+
+            if ($(event.target).is('img')) {
+                $('.hidden').show();
+            }
+
             console.log(event.pageY, event.pageX);
             $('#context').css({
                 top: event.pageY,

@@ -295,3 +295,21 @@ In Javascript:
         $('#context').fadeOut();
 
 ## is method
+
+- In the context menu previously, add more linkes with the class `hidden`.
+
+To hide it for now:
+
+    .context-menu a.hidden {
+        display: none;
+    }
+
+To show it in Javascript (when you right click on an image):
+
+    $('.hidden').hide();
+
+    if ($(event.target).is('img')) {
+        $('.hidden').show();
+    }
+
+The formatting may be off. Instead of `hide` and `show`, we can use `removeClass('shown')` and `addClass('shown')`. Then we target the style in CSS (it would be `.context-menu a.hidden.shown`), perhaps set `display` to `block`.
