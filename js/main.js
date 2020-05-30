@@ -68,5 +68,7 @@ $(document).ready(function() {
         }
     })
 
+    $('p:contains("Lorem")').html("This has been replaced!");
+
 
 })

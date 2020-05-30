@@ -105,3 +105,30 @@ Say we want to validate an email in an `input` element. We give the element a pr
     })
 
 We have an element with the class `status`, which will validate our email address on the go.
+
+    $('input').focusout(function() {
+        if ($(this).val().indexOf('@') > -1 && $(this).val().indexOf('.') > -1) {
+            $('.status').html("Valid email");
+        } else {
+            $('.status').html("Invalid email");
+
+        }
+    })
+
+This will validate the email address after they click out of the input area.
+
+## Contains, is, and hasClass
+
+    $('p:contains("example")').html("This has been replaced!");
+
+This selects a `p` element containing the word `example`, and replaces it with the specified text.
+
+    $('classname').is('element type')
+
+This returns a boolean depending if the specified classname is of the element type.
+
+    $(':contains("example")').is("div")
+
+This checks if anything that contains `example` is of a `div` element.
+
+`.hasClass(class name)` can also be used to check if an element has a specific class name.
