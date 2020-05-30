@@ -68,7 +68,8 @@ $(document).ready(function() {
         }
     })
 
-    $('p:contains("Lorem")').html("This has been replaced!");
-
+    $('p').each(function() {
+        console.log($(this).text());
+    })
 
 })

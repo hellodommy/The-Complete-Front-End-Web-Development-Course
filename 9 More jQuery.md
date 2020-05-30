@@ -132,3 +132,15 @@ This returns a boolean depending if the specified classname is of the element ty
 This checks if anything that contains `example` is of a `div` element.
 
 `.hasClass(class name)` can also be used to check if an element has a specific class name.
+
+## Each method
+
+    $('p').each(function() {
+        console.log($(this).text());
+    })
+
+This will log the contents for every `p` element.
+
+    console.log($('p').text())
+
+This will achieve the same effect but the contents will be in a single log output instead.
