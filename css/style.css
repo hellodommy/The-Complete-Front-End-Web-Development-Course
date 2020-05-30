@@ -6,67 +6,35 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-body h1 {
-    margin: 5px;
-}
-
-h1 {
-    border: 3px solid #ffffff;
-    margin-top: 0px;
-}
-
-h3 {
-    margin: 10px;
-    padding: 2px;
-    border-bottom: 1px solid #000000;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
-p {
-    letter-spacing: 1px;
-}
-
-.my-input, .my-textarea {
-    display: block;
-    width: 100%;
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-}
-
-.my-input:focus {
-    background: #ffafaf;
-}
-
-.profile-menu {
-    list-style: none;
-    float: right;
-}
-
-.submenu {
-    list-style: none;
-    padding: 0px;
-    border: 1px solid #aaa;
-    background: #fff;
-    margin-top: 30px;
-    box-shadow: 2px 2px 15px #aaa;
-    width: 300px;
-    position: absolute;
-    right: 10px;
-    display: none;
-}
-
-.submenu.active {
-    display: block;
-}
-
 section {
     max-width: 100%;
     width: 900px;
     margin: auto;
+}
+
+#context {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 5);
+}
+
+.context-menu {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.context-menu a {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+}
+
+.context-menu a:hover {
+    background: #eee; 
 }

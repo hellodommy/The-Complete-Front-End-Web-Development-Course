@@ -1,19 +1,23 @@
 $(document).ready(function() {
 
+    $(document).on('contextmenu', function() {
+        return false;
+    });
+
     $(document).on('mousedown', function(event) {
-        event.preventDefault();
-        switch(event.which) {
-            case 1:
-                console.log("left mouse clicked");
-                break;
-            case 2:
-                console.log("middle mouse clicked");
-                break;
-            case 3:
-                console.log("right mouse clicked");
-                break;
+        event.stopPropagation();
+
+        if (event.which == 3) {
+            console.log(event.pageY, event.pageX);
+            $('#context').css({
+                top: event.pageY,
+                left: event.pageX
+            });
+            $('#context').fadeIn();
+            return false;
         }
-        console.log(event.which);
+        $('#context').fadeOut();
+
     })
 
     $('[href="https://google.com"]').on('click', function (event) {

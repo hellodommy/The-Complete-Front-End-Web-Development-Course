@@ -205,4 +205,93 @@ Say we have a link `<a href="https://google.com" target="_blank">google</a><br>`
     })
 
 - Now we can target cases where certain mouse type is clicked. We are using a switch statement.
-- 
+  
+## Custom context menu, pageY and pageX
+
+In HTML:
+
+    <div id="context">
+        <ul class="context-menu">
+            <li><a href="#">something</a></li>
+            <li><a href="#">something 1</a></li>
+            <li><a href="#">something 2</a></li>
+            <li><a href="#">something 3</a></li>
+            <li><a href="#">something 4</a></li>
+        </ul>
+    </div>
+
+In CSS:
+
+- This will create a menu that is not seen. To preview it, remove `display: none` under `#context`.
+
+    #context {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 5);
+    }
+
+    .context-menu {
+        list-style: none;
+        padding: 0px;
+    }
+
+    .context-menu a {
+        display: block;
+        width: 200px;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: 600;
+    }
+
+    .context-menu a:hover {
+        background: #eee; 
+    }
+
+In Javascript:
+
+- This will output the position of the mouse where your right-click.
+
+    $(document).on('mousedown', function(event) {
+        event.stopPropagation();
+        if (event.which == 3) {
+            console.log(event.pageY, event.pageX);
+        }
+    })
+
+- Then, this will let the context menu appear wherever you right click. It is positioned based on the X and Y of your mouse position.
+
+    $(document).on('contextmenu', function() {
+        return false;
+    });
+
+    $(document).on('mousedown', function(event) {
+        event.stopPropagation();
+
+        if (event.which == 3) {
+            console.log(event.pageY, event.pageX);
+            $('#context').css({
+                top: event.pageY,
+                left: event.pageX
+            });
+
+            $('#context').show();
+        }
+    })
+
+- Now it can fade out
+
+        if (event.which == 3) {
+            console.log(event.pageY, event.pageX);
+            $('#context').css({
+                top: event.pageY,
+                left: event.pageX
+            });
+            $('#context').fadeIn();
+            return false;
+        }
+        $('#context').fadeOut();
+
+## is method
