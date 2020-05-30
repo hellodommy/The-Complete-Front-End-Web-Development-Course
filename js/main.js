@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    dQuery(".whatsup").addClass("my friend");
+
     $(document).on('contextmenu', function() {
         return false;
     });
