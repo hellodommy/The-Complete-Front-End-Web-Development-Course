@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
-    dQuery(".whatsup").addClass("my friend");
+    $('#main').find('p').addClass('test')
 
+    console.log($('.context-menu a').first().text());
+    console.log($('.context-menu a').last().text());
     $(document).on('contextmenu', function() {
         return false;
     });
@@ -48,4 +50,34 @@ $(document).ready(function() {
             $('#main').html(content);
         }
     });
+
+    $('textarea').focusin(function() {
+        console.log("Focused in on the textarea");
+    })
+
+    $('textarea').focusout(function () {
+        console.log("Focused out on the textarea");
+    })
+
+    window.passed = 0;
+    window.hasAt = 0;
+    window.hasDot = 0;
+
+    $('input[name=email]').on('keyup', function() {
+
+        if ($(this).val().indexOf('@') > -1) {
+            hasAt++;
+        }
+        if ($(this).val().indexOf('.') > -1) {
+            hasDot++;
+        }
+
+        if (window.hasAt > 1 && window.hasDot > 1) {
+            $('.status').html("VALID");
+        } else {
+            $('.status').html("INVALID");
+
+        }
+        
+    })
 })

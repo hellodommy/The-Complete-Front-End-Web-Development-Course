@@ -45,3 +45,63 @@
     } else {
         this.elements = document;
     }
+
+## Find method
+
+- `.ready` in jQuery checks if the document is fully loaded before executing your code.
+- It is not actually necessary if your load Javascript at the bottom of your HTML document (which is good practice!).
+  - It it is in the header, it could block the loading of the page.
+
+    $('#main').find('p').addClass('test')
+
+- This will **find** `p` inside `#main` and add the class `test` to `p`.
+  - This is useful for navigating large documents.
+
+## First and Last
+
+    console.log($('.context-menu a').first().text());
+
+- This will print out the first `a` element in `context-menu` class.
+
+    console.log($('.context-menu a').last().text());
+
+- This will print out the last `a` element in `context-menu` class.
+
+## Focusin and focusout
+
+    $('textarea').focusin(function() {
+        console.log("Focused in on the textarea");
+    })
+
+- This will log to the console every time we *focus in* on the `textarea` element. This is considered clicking within the text area. Clicking on it multiple times does not count. You have to click out, then click in again.
+
+    $('textarea').focusin(function() {
+        console.log("Focused in on the textarea");
+    })
+
+- This will log to the console every time we *focus out* of the `textarea` element. This is considered clicking outside the `textarea` after clicking in the `textarea`.
+
+Say we want to validate an email in an `input` element. We give the element a property `name=email` that we can target.
+
+    window.hasAt = 0;
+    window.hasDot = 0;
+
+    $('input[name=email]').on('keyup', function() {
+
+        if ($(this).val().indexOf('@') > -1) {
+            hasAt++;
+        }
+        if ($(this).val().indexOf('.') > -1) {
+            hasDot++;
+        }
+
+        if (window.hasAt > 1 && window.hasDot > 1) {
+            $('.status').html("VALID");
+        } else {
+            $('.status').html("INVALID");
+
+        }
+        
+    })
+
+We have an element with the class `status`, which will validate our email address on the go.
