@@ -62,3 +62,48 @@ Add the tab content:
         <div class="tab-pane" id="perks" role="tabpanel">PERKS</div>
     </div>
     
+## Image and Footer
+
+1. Get the vault boy image and make the background transparent (use Gimp/Photoshop).
+2. Add the image to the STATUS tab:
+   
+        <div class="center-image">
+            <img src="pipboy.png">
+        </div>
+
+3. Configure the CSS:
+   
+       .center-image img {
+           margin: auto;
+           display: block;
+           position: relative;
+           max-height: 300px;
+           margin-top: 100px;
+           filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(11) brightness(1) contrast(1.2);
+       }
+
+4. Add the footer:
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light pip-footer">
+              <div class="row">
+                  <div class="col-3">
+                      HP 90/90
+                  </div>
+                  <div class="col-6">
+                      LEVEL 1
+                      <div class="level-progress"></div>
+                  </div>
+                  <div class="col-3">
+                      AP 50/50
+                  </div>
+              </div>
+          </nav>
+
+5. Configure CSS for the footer:
+
+            .pip-footer {
+                position: fixed;
+                bottom: 0;
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
