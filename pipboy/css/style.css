@@ -13,3 +13,19 @@
     width: calc(100% - 20px);
     margin: 10px;
 }
+
+body {
+    color: #14fe17;
+    background: #272b23;
+}
+
+ul.navbar-nav > li.navbar-item > a.nav-link,  ul.navbar-nav > li.navbar-item.active > a.nav-link {
+    color: #14fe17;
+}
+
+ul.nav > li.nav-item > a.nav-link {
+    color: #14fe17;
+}
+
+
+

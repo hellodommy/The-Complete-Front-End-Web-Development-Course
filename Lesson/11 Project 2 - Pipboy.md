@@ -7,9 +7,9 @@
 3. Download *compressed, production jQuery 3.5.1* and add to directory.
 4. Download tether.io and add to directory.
    
-*Instructions the same as in previous Bootstrap lesson [here](../Front%20End%20Course/../Front%20End%20Course/Lesson/10%20Bootstrap%20Basics.md).*
+*Instructions the same as in previous Bootstrap lesson [here](10%20Bootstrap%20Basics.md).*
 
-5. Create our own js `pipboy.app.js` for our own Javascript files later.
+1. Create our own js `pipboy.app.js` for our own Javascript files later.
 
 ## Navbar
 
@@ -107,3 +107,25 @@ Add the tab content:
                 width: calc(100% - 20px);
                 margin: 10px;
             }
+
+## Colours
+
+- Look for images you want to replicate and use the colour picker to get the exact colour hex.
+- If colours of components are not changing accordingly, look at their elements and make sure they are targetted correctly.
+
+Current colour situation for the fluorescent green on black look:
+
+    body {
+        color: #14fe17;
+        background: #272b23;
+    }
+
+    ul.navbar-nav > li.navbar-item > a.nav-link,  ul.navbar-nav > li.navbar-item.active > a.nav-link {
+        color: #14fe17;
+    }
+
+    ul.nav > li.nav-item > a.nav-link {
+        color: #14fe17;
+    }
+
+
