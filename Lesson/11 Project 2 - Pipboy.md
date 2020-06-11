@@ -183,3 +183,22 @@ Current styling situation:
     }
 
 These are used to justify the menu text and add borders.
+
+## Scanline
+
+- Effect to make the screen look like a game console.
+
+    body::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4) 1px, transparent 1px, transparent 2px);
+        opacity: .5;
+        z-index: 1000000;
+        pointer-events: none;
+    }
+
+Without the `pointer-events: none`, the buttons on the page cannot be clicked through.

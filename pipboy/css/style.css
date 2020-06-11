@@ -20,6 +20,19 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
+body::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4) 1px, transparent 1px, transparent 2px);
+    opacity: .5;
+    z-index: 1000000;
+    pointer-events: none;
+}
+
 ul.navbar-nav > li.navbar-item > a.nav-link,  ul.navbar-nav > li.navbar-item.active > a.nav-link {
     color: #14fe17;
 }
