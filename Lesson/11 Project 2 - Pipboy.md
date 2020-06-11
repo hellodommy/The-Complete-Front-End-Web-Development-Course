@@ -128,4 +128,58 @@ Current colour situation for the fluorescent green on black look:
         color: #14fe17;
     }
 
+## Font and Styling
 
+1. Download `.ttf` file and drag it to project root directory.
+2. Create the font in CSS.
+
+    @font-face {
+        font-family: Pipboy;
+        src: url('../monofonto.ttf');
+    }
+
+After that, you can use the font as usual.
+
+Current styling situation:
+
+    .navbar {
+        border-bottom: 2px solid;
+        margin: 0px 10px;
+    }
+
+    .navbar::before, .navbar::after {
+        height: 6px;
+        width: 2px;
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 5000;
+        background: #14fe17;
+        bottom: -8px;
+    }
+
+    .navbar::before {
+        left: 0px;
+    }
+
+    .navbar::after {
+        right: 0px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-light ul.navbar-nav > li {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-light .navbar-nav > li.navbar-item > .nav-link {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
+
+These are used to justify the menu text and add borders.
