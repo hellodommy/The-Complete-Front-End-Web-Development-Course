@@ -14,6 +14,7 @@ You can view my test site [here](https://hellodommy.github.io/The-Complete-Front
 8. [Getting Started with jQuery](Lesson/8%20More%20Javascript%20Concepts.md)
 9. [More jQuery](Lesson/9%20More%20jQuery.md)
 10. [Bootstrap Basics](Lesson/10%20Bootstrap%20Basics.md)
-11. Project #2 (not completed)
-12. Project #3 (not completed)
-13. Final thoughts (not completed)
+11. [Project #2: Pipboy](Lesson/11%20Project%202%20-%20Pipboy.md) (🏋🏻‍♀️ in progress)
+    - Project site [here](https://hellodommy.github.io/The-Complete-Front-End-Web-Development-Course/pipboy).
+13. Project #3 (not completed)
+14. Final thoughts (not completed)
