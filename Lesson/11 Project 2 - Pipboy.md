@@ -202,3 +202,47 @@ These are used to justify the menu text and add borders.
     }
 
 Without the `pointer-events: none`, the buttons on the page cannot be clicked through.
+
+## Navigation Styling
+
+The following adds the "box effect" to active menu items:
+
+    .navbar-light .navbar-nav > li.navbar-item > .nav-link {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        font-size: 32px;
+        line-height: 20px;
+        padding-bottom: 0px;
+        z-index: 50;
+        position: relative;
+        background: #272b23;
+        color: #14fe17;
+    }
+
+    .navbar-item.active::before {
+        content: "";
+        position: absolute;
+        background: #f00;
+        width: 100%;
+        height: 14px;
+        top: 24px;
+        background: #272b23;
+        border-left: 2px solid;
+        border-right: 2px solid;
+        border-top: 2px solid;
+    }
+
+## Tabs
+
+- CSS nth child allows you to target the nth instance of a certain parent. Read more [here](https://www.w3schools.com/cssref/sel_nth-child.asp).
+
+The following adds a gradient effect to nav tab items:
+
+    .nav-tabs > li:nth-child(2) > a {
+        opacity: .6;
+    }
+
+    .nav-tabs > li:nth-child(3) > a {
+        opacity: .3;
+    }
