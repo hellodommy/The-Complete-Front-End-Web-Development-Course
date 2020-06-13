@@ -7,17 +7,11 @@
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(11) brightness(1) contrast(1.2);
 }
 
-.pip-footer {
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 20px);
-    margin: 10px;
-}
-
 body {
     color: #14fe17;
     background: #272b23;
     font-family: 'Share Tech Mono', monospace;
+    padding: 20px;
 }
 
 body::after {
@@ -125,3 +119,22 @@ ul.nav > li.nav-item > a.nav-link {
     padding: 0px 20px;
 }
 
+.level-progress {
+    width: 70%;
+    height: 10px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+.level-progress-indicator {
+    width: 30%;
+    height: 8px;
+    background-color: #14fe17;
+    position: relative;
+}
+
+.footer-element {
+    padding: 2px;
+    border: 2px solid #272b23;
+    background-color: rgba(16, 255, 0, 0.15)
+}

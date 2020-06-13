@@ -246,3 +246,21 @@ The following adds a gradient effect to nav tab items:
     .nav-tabs > li:nth-child(3) > a {
         opacity: .3;
     }
+
+## Progress Bars
+
+The following creates a progress bar with `level-progress-indicator` being wrapped by `level-progress`.
+
+.level-progress {
+    width: 70%;
+    height: 10px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+.level-progress-indicator {
+    width: 30%;
+    height: 8px;
+    background-color: #14fe17;
+    position: relative;
+}
