@@ -342,3 +342,31 @@ Styling like so:
 
 - In the .js file, create an array of weapon objects.
 - Add a container that lists the corresponding stats of the weapons - they will be targetted using Javascript later.
+
+## Finishing Touches with Javascript
+
+ Target the classes in jQuery like so:
+
+     $('.item-list a').on('mouseenter', function(e) {
+        var current_item = $(e.currentTarget).attr('id');
+        for (item in weapons) {
+            if (weapons[item].name == current_item) {
+                var container = $('.item-stats');
+                container.find('.damage').html(weapons[item].damage);
+                container.find('.fire-rate').html(weapons[item].fire_rate);
+                container.find(".range").html(weapons[item].range);
+                container.find(".accuracy").html(weapons[item].accuracy);
+                container.find(".weight").html(weapons[item].weight);
+                container.find(".value").html(weapons[item].value);
+            }
+        };
+    })
+
+To listen for an active item (when clicked):
+
+    $('.item-list a').on('click', function(e) {
+        $('.item-list a').removeClass('active');
+        $(e.currentTarget).addClass('active');
+    });
+
+Then style the active class accordingly in CSS.

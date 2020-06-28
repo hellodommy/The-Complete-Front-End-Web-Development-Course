@@ -227,8 +227,31 @@ ul.nav > li.nav-item > a.nav-link {
     display: block;
     width: 300px;
     padding: 5px 10px;
+    padding-left: 25px;
     border-radius: 2px;
     color: #14fe14;
+}
+
+.item-list a.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #14fe17;
+    left: 25px;
+    margin-top: 7px;
+}
+
+.item-list a.active:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #272b23;
+    left: 25px;
+    margin-top: 7px;
 }
 
 .item-list li a:hover {
@@ -245,7 +268,7 @@ ul.nav > li.nav-item > a.nav-link {
     position: fixed;
     right: 167px;
     bottom: 100px;
-    width: 200px;
+    width: 300px;
 }
 
 .pull-left {
