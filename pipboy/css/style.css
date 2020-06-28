@@ -8,6 +8,17 @@
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(11) brightness(1) contrast(1.2);
 }
 
+.stat-numbers img {
+    width: 100%;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
+.stat-numbers img.sm-image {
+    width: 20px;
+    margin-left: -5px;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
 .center-image {
     position: absolute;
     margin-left: 100px;
@@ -194,4 +205,13 @@ ul.nav > li.nav-item > a.nav-link {
 
 .w90 {
     width: 90%;
+}
+
+.stat-numbers .col-1, .stat-numbers .col-2 {
+    background-color: rgba(16, 255, 0, 0.15);
+    margin-right: 5px;
+}
+
+.stat-numbers .col-1.transparent, .stat-numbers .col-2.transparent {
+    background-color: transparent;
 }
