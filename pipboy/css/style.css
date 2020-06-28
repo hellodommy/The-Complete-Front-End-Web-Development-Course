@@ -3,8 +3,14 @@
     display: block;
     position: relative;
     max-height: 300px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-left: -30px;
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(11) brightness(1) contrast(1.2);
+}
+
+.center-image {
+    position: absolute;
+    margin-left: 100px;
 }
 
 body {
@@ -137,4 +143,54 @@ ul.nav > li.nav-item > a.nav-link {
     padding: 2px;
     border: 2px solid #272b23;
     background-color: rgba(16, 255, 0, 0.15)
+}
+
+.stat-bar {
+    width: 60px;
+    margin: auto;
+}
+
+#status {
+    max-width: 400px;
+    margin: auto;
+}
+
+.stat-bars > .row {
+    margin-bottom: 100px;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w90 {
+    width: 90%;
 }

@@ -264,3 +264,32 @@ The following creates a progress bar with `level-progress-indicator` being wrapp
         background-color: #14fe17;
         position: relative;
     }
+
+Each tiny progress bar is a column in a row like so:
+
+    <div class="row">
+        <div class="col-3">
+            <div class="stat-bar">
+                <div class="level-progress">
+                    <div class="level-progress-indicator w30"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col-3">
+            <div class="stat-bar">
+                <div class="level-progress">
+                    <div class="level-progress-indicator w80"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+Utility classes (eg. w10, w20...) are used to vary how filled the progress bar is.
+
+Eg.
+
+    .w90 {
+        width: 90%;
+    }
