@@ -338,3 +338,7 @@ Styling like so:
 - Copy the .html over
 - Change the navbar active item
 
+## Weapon Stat Container
+
+- In the .js file, create an array of weapon objects.
+- Add a container that lists the corresponding stats of the weapons - they will be targetted using Javascript later.

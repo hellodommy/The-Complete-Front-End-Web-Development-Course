@@ -215,3 +215,48 @@ ul.nav > li.nav-item > a.nav-link {
 .stat-numbers .col-1.transparent, .stat-numbers .col-2.transparent {
     background-color: transparent;
 }
+
+.item-list {
+    float: left;
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+
+.item-list li a {
+    display: block;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: #14fe14;
+}
+
+.item-list li a:hover {
+    background-color: #14fe14;
+    text-decoration: none;
+    color: #272b23;
+}
+
+.tab-pane.full {
+    height: calc(100vh - 180px);
+}
+
+.item-stats {
+    position: fixed;
+    right: 167px;
+    bottom: 100px;
+    width: 200px;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.item-stats .row .col-12 {
+    background-color: rgba(16, 255, 0, 0.15);
+    margin-bottom: 3px;
+}
