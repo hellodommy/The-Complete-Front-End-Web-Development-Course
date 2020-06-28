@@ -133,16 +133,17 @@ ul.nav > li.nav-item > a.nav-link {
 }
 
 .level-progress-indicator {
-    width: 30%;
     height: 8px;
     background-color: #14fe17;
     position: relative;
 }
 
 .footer-element {
-    padding: 2px;
+    padding: 5px;
+    padding-right: 10px;
     border: 2px solid #272b23;
-    background-color: rgba(16, 255, 0, 0.15)
+    background-color: rgba(16, 255, 0, 0.15);
+    font-size: 22px;
 }
 
 .stat-bar {

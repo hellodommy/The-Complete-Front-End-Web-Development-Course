@@ -293,3 +293,7 @@ Eg.
     .w90 {
         width: 90%;
     }
+
+## Footer Fixes
+
+- Add `text-right` in class names to align text to the right.
