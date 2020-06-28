@@ -296,4 +296,45 @@ Eg.
 
 ## Footer Fixes
 
-- Add `text-right` in class names to align text to the right.
+- Add `text-right` in class names to align text to the right (a utility class from Boostrap).
+
+## Damage and Resistance
+
+Add the following for the damage and resistance stat bars:
+
+     <div class="row stat-numbers">
+         <div class="col-2 transparent"></div>
+         <div class="col-2">B</div>
+         <div class="col-1">
+             <div class="icon">o</div>
+             <div class="points">19</div>
+         </div>
+         <div class="col-1 transparent"></div>
+          <div class="col-2">B</div>
+          <div class="col-1">
+              <div class="icon">E</div>
+              <div class="points">19</div>
+          </div>
+          <div class="col-1">
+              <div class="icon">R</div>
+              <div class="points">19</div>
+          </div>
+          <div class="col-2 transparent"></div>
+     </div>
+
+Styling like so:
+
+    .stat-numbers .col-1, .stat-numbers .col-2 {
+        background-color: rgba(16, 255, 0, 0.15);
+        margin-right: 5px;
+    }
+
+    .stat-numbers .col-1.transparent, .stat-numbers .col-2.transparent {
+        background-color: transparent;
+    }
+
+## Inventory Template
+
+- Copy the .html over
+- Change the navbar active item
+
